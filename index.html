@@ -9,7 +9,8 @@
     <!-- SEO Meta Tags -->
     <title>Beautysalon Harmonie | Professionelle Schönheitspflege in Hannover</title>
     <meta name="description"
-        content="Beautysalon Harmonie in Hannover - Friseur, Maniküre, Pediküre, Kosmetik, Massagen. ✓ Professionelle Meister ✓ Premium Produkte ✓ Faire Preise. Jetzt Termin vereinbaren!">
+        content="Beautysalon Harmonie in Hannover – professionelle Haarverlängerung, Dauerwelle, Balayage, Coloration und mehr. Jetzt Termin vereinbaren.">
+
     <meta name="keywords"
         content="Beautysalon Hannover, Friseur Hannover, Maniküre, Pediküre, Kosmetik, Massage, Wimpernverlängerung, Augenbrauen, Schönheitssalon">
     <meta name="author" content="Beautysalon Harmonie">
@@ -40,8 +41,9 @@
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": "Beautysalon Harmonie",
-      "image": "https://harmonie-salon.de/images/salon.jpg",
-      "description": "Premium Beautysalon in Hannover mit professionellen Dienstleistungen",
+      "image": "https://bsalon.vercel.app/images/salon.jpg",
+      "description": "Beautysalon Harmonie in Hannover – Haarverlängerung, Coloration, Balayage und moderne Stylings in entspannter Atmosphäre."
+        ,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Musterstraße 10",
@@ -55,7 +57,7 @@
         "latitude": 52.3759,
         "longitude": 9.7320
       },
-      "url": "https://harmonie-salon.de",
+      "url": "https://bsalon.vercel.app",
       "telephone": "+49-511-123456",
       "email": "info@harmonie-salon.de",
       "priceRange": "€€",
@@ -69,7 +71,10 @@
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "156"
-      }
+      },
+  "sameAs": [
+    "https://www.instagram.com/DEIN_INSTAGRAM"
+  ]
     }
     </script>
 
@@ -155,6 +160,14 @@
 
         .burger-menu.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .bg-light {
+            background: var(--light);
+        }
+
+        .border-secondary {
+            border-color: var(--secondary);
         }
 
         /* Mobile Menu */
@@ -1004,7 +1017,7 @@
             border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        /* Улучшенные toggles с keyboard support */
+
         .cookie-toggle:focus {
             outline: 2px solid #d4af37;
             outline-offset: 2px;
@@ -1015,7 +1028,6 @@
             cursor: pointer;
         }
 
-        /* Анимация для баннера */
         @keyframes slideUp {
             from {
                 transform: translateY(100%);
@@ -1032,7 +1044,7 @@
             animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Анимация для модального окна */
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -1063,13 +1075,12 @@
             animation: slideDown 0.3s ease;
         }
 
-        /* Улучшенная типографика для модального окна */
         .cookie-category-title {
             font-family: 'Inter', sans-serif;
             font-weight: 600;
         }
 
-        /* Лучшая контрастность */
+
         .cookie-text a {
             text-decoration: underline;
             text-decoration-thickness: 1px;
@@ -1140,7 +1151,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
 
-        // По умолчанию всё отклонено
         gtag('consent', 'default', {
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
@@ -1148,7 +1158,7 @@
             'analytics_storage': 'denied',
             'functionality_storage': 'denied',
             'personalization_storage': 'denied',
-            'security_storage': 'granted', // Всегда разрешено для безопасности
+            'security_storage': 'granted',
             'wait_for_update': 500
         });
     </script>
@@ -1163,7 +1173,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="deco-line"></div>
-                    <a href="#" class="text-2xl font-semibold tracking-tight"
+                    <a href="/" class="text-2xl font-semibold tracking-tight"
                         style="font-family: 'Playfair Display', serif;">
                         HARMONIE
                     </a>
@@ -1245,12 +1255,9 @@
                     </p>
                 </div>
                 <div class="relative">
-                    <!-- СЮДА ДОБАВЬТЕ ФОТО САЛОНА -->
-                    <!-- Рекомендуемый размер: 800x800px, формат: JPG или WebP -->
-                    <img src="images/salon-interior.jpg" alt="Elegantes Interieur des Beautysalon Harmonie"
+
+                    <img src="images/salon-interior.jpg" alt="Elegantes Interieur des Beautysalon Harmonie in Hannover"
                         class="w-full aspect-square object-cover" loading="lazy">
-                    <!-- Если нет фото, оставьте этот код: -->
-                    <!-- <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200"></div> -->
                     <div class="absolute -bottom-12 -left-12 w-32 h-32 border border-secondary opacity-50"></div>
                 </div>
             </div>
@@ -1575,8 +1582,6 @@
         </div>
 
         <div class="gallery-grid">
-            <!-- ФОТО 1: Работа с волосами -->
-            <!-- Рекомендуемый размер: 600x600px -->
             <div class="gallery-item">
                 <img src="images/gallery/hair-styling.jpg" alt="Professionelles Hair Styling im Salon Harmonie"
                     class="absolute inset-0 w-full h-full object-cover" loading="lazy">
@@ -1584,8 +1589,6 @@
                     <span class="gallery-text">Hair Design</span>
                 </div>
             </div>
-
-            <!-- ФОТО 2: Маникюр -->
             <div class="gallery-item">
                 <img src="images/gallery/nail-art.jpg" alt="Luxuriöse Maniküre und Nail Art"
                     class="absolute inset-0 w-full h-full object-cover" loading="lazy">
@@ -1593,8 +1596,6 @@
                     <span class="gallery-text">Nail Art</span>
                 </div>
             </div>
-
-            <!-- ФОТО 3: Макияж -->
             <div class="gallery-item">
                 <img src="images/gallery/makeup.jpg" alt="Professionelles Make-up"
                     class="absolute inset-0 w-full h-full object-cover" loading="lazy">
@@ -1602,8 +1603,6 @@
                     <span class="gallery-text">Make-up</span>
                 </div>
             </div>
-
-            <!-- ФОТО 4: Стайлинг -->
             <div class="gallery-item">
                 <img src="images/gallery/styling.jpg" alt="Elegantes Haar-Styling"
                     class="absolute inset-0 w-full h-full object-cover" loading="lazy">
@@ -1652,12 +1651,12 @@
                         <div>
                             <div class="text-sm uppercase tracking-wider mb-3" style="color: var(--secondary);">E-Mail
                             </div>
-                            <a href="/cdn-cgi/l/email-protection#7811161e173810190a151716111d550b19141716561c1d"
+                            <a href="mailto:info@harmonie-salon.de"
                                 class="text-lg font-light text-gray-700 hover:text-secondary transition">
-                                <span class="__cf_email__"
-                                    data-cfemail="6f060109002f070e1d020001060a421c0e030001410b0a">[email&#160;protected]</span>
+                                info@harmonie-salon.de
                             </a>
                         </div>
+
 
                         <div>
                             <div class="text-sm uppercase tracking-wider mb-3" style="color: var(--secondary);">
@@ -1775,9 +1774,8 @@
                     <address class="not-italic space-y-3 text-sm font-light" style="color: #b0b0b0;">
                         <p>Musterstraße 10<br />30159 Hannover</p>
                         <p><a href="tel:+49511123456" class="hover:text-white transition">+49 (511) 123-456</a></p>
-                        <p><a href="/cdn-cgi/l/email-protection#c2abaca4ad82aaa3b0afadacaba7efb1a3aeadaceca6a7"
-                                class="hover:text-white transition"><span class="__cf_email__"
-                                    data-cfemail="97fef9f1f8d7fff6e5faf8f9fef2bae4f6fbf8f9b9f3f2">[email&#160;protected]</span></a>
+                        <p><a href="mailto:info@harmonie-salon.de">info@harmonie-salon.de</a>
+
                         </p>
                     </address>
                 </div>
@@ -1809,7 +1807,6 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Burger Menu Toggle
         const burgerBtn = document.getElementById('burgerBtn');
@@ -1831,19 +1828,23 @@
             });
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+
+                if (!href || href === '#') return;
+
+                const target = document.querySelector(href);
+                if (!target) return;
+
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         });
+
     </script>
 
     <!-- Supabase JS (UMD) -->
@@ -2012,54 +2013,404 @@
                         <div>
                             <div class="cookie-category-title">Marketing-Cookies</div>
                         </div>
-
                         <div class="cookie-toggle" data-category="marketing" id="toggleMarketing" role="switch"
                             aria-checked="false" tabindex="0"></div>
-                        <div class="cookie-category-desc">
-                            Marketing-Cookies werden verwendet, um Besuchern relevante Anzeigen und Marketingkampagnen
-                            bereitzustellen.
-                        </div>
                     </div>
-
-                    <!-- Preferences Cookies -->
-                    <div class="cookie-category">
-                        <div class="cookie-category-header">
-                            <div>
-                                <div class="cookie-category-title">Präferenz-Cookies</div>
-                            </div>
-
-                            <div class="cookie-toggle" data-category="preferences" id="togglePreferences" role="switch"
-                                aria-checked="false" tabindex="0"></div>
-                        </div>
-                        <div class="cookie-category-desc">
-                            Präferenz-Cookies ermöglichen es einer Website, sich Informationen zu merken, die das
-                            Verhalten
-                            oder Aussehen der Website ändern.
-                        </div>
+                    <div class="cookie-category-desc">
+                        Marketing-Cookies werden verwendet, um Besuchern relevante Anzeigen
+                        und Marketingkampagnen bereitzustellen.
                     </div>
                 </div>
 
-                <div class="cookie-modal-footer">
-                    <button class="cookie-btn cookie-btn-decline" id="saveSettingsDecline">
-                        Nur Notwendige
-                    </button>
-                    <button class="cookie-btn cookie-btn-accept" id="saveSettingsAccept">
-                        Auswahl speichern
-                    </button>
+                <!-- Präferenz-Cookies -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div>
+                            <div class="cookie-category-title">Präferenz-Cookies</div>
+                        </div>
+                        <div class="cookie-toggle" data-category="preferences" id="togglePreferences" role="switch"
+                            aria-checked="false" tabindex="0"></div>
+                    </div>
+                    <div class="cookie-category-desc">
+                        Präferenz-Cookies ermöglichen es einer Website, sich Informationen zu
+                        merken, die das Verhalten oder Aussehen der Website ändern.
+                    </div>
                 </div>
+
+            </div>
+
+            <div class="cookie-modal-footer">
+                <button class="cookie-btn cookie-btn-decline" id="saveSettingsDecline">
+                    Nur Notwendige
+                </button>
+                <button class="cookie-btn cookie-btn-accept" id="saveSettingsAccept">
+                    Auswahl speichern
+                </button>
             </div>
         </div>
-        <script>
-            // Enhanced Cookie Consent Management with GDPR Compliance
-            (function () {
-                'use strict';
+    </div>
+    <script>
+        // Enhanced Cookie Consent Management with GDPR Compliance
+        (function () {
+            'use strict';
 
-                const COOKIE_NAME = 'harmonie_cookie_consent';
-                const COOKIE_VERSION = '1.0'; // Для версионирования согласия
-                const COOKIE_EXPIRY_DAYS = 365;
+            const COOKIE_NAME = 'harmonie_cookie_consent';
+            const COOKIE_VERSION = '1.0';
+            const COOKIE_EXPIRY_DAYS = 365;
 
-                // Cookie consent state
-                let cookieConsent = {
+            // Cookie consent state
+            let cookieConsent = {
+                version: COOKIE_VERSION,
+                necessary: true,
+                analytics: false,
+                marketing: false,
+                preferences: false,
+                timestamp: null
+            };
+
+            // DOM Elements
+            const banner = document.getElementById('cookieBanner');
+            const modal = document.getElementById('cookieModal');
+            const acceptAllBtn = document.getElementById('acceptAllCookies');
+            const declineOptionalBtn = document.getElementById('declineOptionalCookies');
+            const settingsBtn = document.getElementById('cookieSettings');
+            const saveDeclineBtn = document.getElementById('saveSettingsDecline');
+            const saveAcceptBtn = document.getElementById('saveSettingsAccept');
+
+            // Toggle elements
+            const toggleAnalytics = document.getElementById('toggleAnalytics');
+            const toggleMarketing = document.getElementById('toggleMarketing');
+            const togglePreferences = document.getElementById('togglePreferences');
+
+            // Initialize on page load
+            function init() {
+                const savedConsent = getCookie(COOKIE_NAME);
+
+                if (savedConsent) {
+                    try {
+                        const parsed = JSON.parse(savedConsent);
+
+                        if (parsed.version === COOKIE_VERSION) {
+                            cookieConsent = parsed;
+                            applyConsent();
+                        } else {
+                            console.log('Cookie consent version mismatch, showing banner');
+                            showBanner();
+                        }
+                    } catch (e) {
+                        console.error('Error parsing cookie consent:', e);
+                        showBanner();
+                    }
+                } else {
+                    // Show banner after a short delay for better UX
+                    setTimeout(showBanner, 1000);
+                }
+
+                setupEventListeners();
+            }
+
+            function setupEventListeners() {
+                // Button listeners
+                acceptAllBtn?.addEventListener('click', acceptAll);
+                declineOptionalBtn?.addEventListener('click', declineOptional);
+                settingsBtn?.addEventListener('click', openSettings);
+                saveDeclineBtn?.addEventListener('click', declineOptional);
+                saveAcceptBtn?.addEventListener('click', saveSettings);
+
+                // Toggle listeners
+                toggleAnalytics?.addEventListener('click', () => toggleCategory('analytics'));
+                toggleMarketing?.addEventListener('click', () => toggleCategory('marketing'));
+                togglePreferences?.addEventListener('click', () => toggleCategory('preferences'));
+
+                // Close modal on outside click
+                modal?.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeSettings();
+                    }
+                });
+
+                // Close modal on Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal?.classList.contains('show')) {
+                        closeSettings();
+                    }
+                });
+
+                // Trap focus in modal
+                modal?.addEventListener('keydown', trapFocus);
+            }
+            // Keyboard support for toggles
+            [toggleAnalytics, toggleMarketing, togglePreferences].forEach(toggle => {
+                if (toggle) {
+                    toggle.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            const category = toggle.dataset.category;
+                            toggleCategory(category);
+                        }
+                    });
+                }
+            });
+            // ACCESSIBILITY: Trap focus inside modal
+            function trapFocus(e) {
+                if (e.key !== 'Tab') return;
+
+                const focusableElements = modal.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (e.shiftKey && document.activeElement === firstElement) {
+                    lastElement.focus();
+                    e.preventDefault();
+                } else if (!e.shiftKey && document.activeElement === lastElement) {
+                    firstElement.focus();
+                    e.preventDefault();
+                }
+            }
+
+            function showBanner() {
+                banner?.classList.add('show');
+                // Announce to screen readers
+                banner?.setAttribute('aria-hidden', 'false');
+            }
+
+            function hideBanner() {
+                banner?.classList.remove('show');
+                banner?.setAttribute('aria-hidden', 'true');
+            }
+
+            function openSettings() {
+                updateToggles();
+                modal?.classList.add('show');
+                document.body.style.overflow = 'hidden';
+
+                // Focus first interactive element
+                const firstButton = modal?.querySelector('button');
+                setTimeout(() => firstButton?.focus(), 100);
+            }
+
+            function closeSettings() {
+                modal?.classList.remove('show');
+                document.body.style.overflow = '';
+
+                // Return focus to settings button
+                settingsBtn?.focus();
+            }
+
+            function updateToggles() {
+                const toggles = {
+                    analytics: toggleAnalytics,
+                    marketing: toggleMarketing,
+                    preferences: togglePreferences
+                };
+
+                Object.entries(toggles).forEach(([category, element]) => {
+                    if (cookieConsent[category]) {
+                        element?.classList.add('active');
+                        element?.setAttribute('aria-checked', 'true');
+                    } else {
+                        element?.classList.remove('active');
+                        element?.setAttribute('aria-checked', 'false');
+                    }
+                });
+            }
+
+            function toggleCategory(category) {
+                const toggle = document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`);
+
+                cookieConsent[category] = !cookieConsent[category];
+
+                if (cookieConsent[category]) {
+                    toggle?.classList.add('active');
+                    toggle?.setAttribute('aria-checked', 'true');
+                } else {
+                    toggle?.classList.remove('active');
+                    toggle?.setAttribute('aria-checked', 'false');
+                }
+            }
+
+            function acceptAll() {
+                cookieConsent = {
+                    version: COOKIE_VERSION,
+                    necessary: true,
+                    analytics: true,
+                    marketing: true,
+                    preferences: true,
+                    timestamp: new Date().toISOString()
+                };
+                saveConsent();
+                hideBanner();
+                closeSettings();
+                applyConsent();
+
+                // Log consent event for analytics
+                logConsentEvent('accept_all');
+            }
+
+            function declineOptional() {
+                cookieConsent = {
+                    version: COOKIE_VERSION,
+                    necessary: true,
+                    analytics: false,
+                    marketing: false,
+                    preferences: false,
+                    timestamp: new Date().toISOString()
+                };
+                saveConsent();
+                hideBanner();
+                closeSettings();
+                applyConsent();
+
+                logConsentEvent('decline_optional');
+            }
+
+            function saveSettings() {
+                cookieConsent.version = COOKIE_VERSION;
+                cookieConsent.timestamp = new Date().toISOString();
+                saveConsent();
+                closeSettings();
+                hideBanner();
+                applyConsent();
+
+                logConsentEvent('custom_settings');
+            }
+
+            function saveConsent() {
+                setCookie(COOKIE_NAME, JSON.stringify(cookieConsent), COOKIE_EXPIRY_DAYS);
+                console.log('✅ Cookie consent saved:', cookieConsent);
+            }
+
+            function applyConsent() {
+                console.log('🍪 Applying consent settings:', cookieConsent);
+
+                // Update Google Consent Mode v2
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'ad_storage': cookieConsent.marketing ? 'granted' : 'denied',
+                        'ad_user_data': cookieConsent.marketing ? 'granted' : 'denied',
+                        'ad_personalization': cookieConsent.marketing ? 'granted' : 'denied',
+                        'analytics_storage': cookieConsent.analytics ? 'granted' : 'denied',
+                        'functionality_storage': cookieConsent.preferences ? 'granted' : 'denied',
+                        'personalization_storage': cookieConsent.preferences ? 'granted' : 'denied'
+                    });
+                }
+
+                // Apply analytics consent
+                if (cookieConsent.analytics) {
+                    enableAnalytics();
+                } else {
+                    disableAnalytics();
+                }
+
+                // Apply marketing consent
+                if (cookieConsent.marketing) {
+                    enableMarketing();
+                } else {
+                    disableMarketing();
+                }
+
+                // Apply preferences consent
+                if (cookieConsent.preferences) {
+                    enablePreferences();
+                } else {
+                    disablePreferences();
+                }
+            }
+
+            function enableAnalytics() {
+                console.log('📊 Analytics enabled');
+
+                // Example: Load Google Analytics
+                // if (!window.gtag && !document.querySelector('script[src*="googletagmanager"]')) {
+                //     const script = document.createElement('script');
+                //     script.async = true;
+                //     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+                //     document.head.appendChild(script);
+                //     
+                //     script.onload = () => {
+                //         window.dataLayer = window.dataLayer || [];
+                //         function gtag(){dataLayer.push(arguments);}
+                //         gtag('js', new Date());
+                //         gtag('config', 'GA_MEASUREMENT_ID');
+                //     };
+                // }
+            }
+
+            function disableAnalytics() {
+                console.log('📊 Analytics disabled');
+                // Disable analytics tracking
+            }
+
+            function enableMarketing() {
+                console.log('📢 Marketing enabled');
+                // Add marketing scripts here (Facebook Pixel, etc.)
+            }
+
+            function disableMarketing() {
+                console.log('📢 Marketing disabled');
+            }
+
+            function enablePreferences() {
+                console.log('⚙️ Preferences enabled');
+            }
+
+            function disablePreferences() {
+                console.log('⚙️ Preferences disabled');
+            }
+
+            function logConsentEvent(action) {
+                // Log to console
+                console.log(`🍪 Consent event: ${action}`, cookieConsent);
+
+                // Optional: Send to analytics (only if analytics cookies are accepted)
+                if (cookieConsent.analytics && typeof gtag === 'function') {
+                    gtag('event', 'cookie_consent', {
+                        'event_category': 'Cookie Consent',
+                        'event_label': action,
+                        'value': 1
+                    });
+                }
+            }
+
+            // Cookie utility functions
+            function setCookie(name, value, days) {
+                const expires = new Date();
+                expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+                document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax;Secure`;
+            }
+
+            function getCookie(name) {
+                const nameEQ = name + '=';
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            function deleteCookie(name) {
+                document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+            // Expose functions globally
+            window.openCookieSettings = openSettings;
+            window.getCookieConsent = () => cookieConsent;
+
+            // Expose function to programmatically revoke consent
+            window.revokeCookieConsent = function () {
+                deleteCookie(COOKIE_NAME);
+                cookieConsent = {
                     version: COOKIE_VERSION,
                     necessary: true,
                     analytics: false,
@@ -2067,363 +2418,11 @@
                     preferences: false,
                     timestamp: null
                 };
+                showBanner();
+            };
 
-                // DOM Elements
-                const banner = document.getElementById('cookieBanner');
-                const modal = document.getElementById('cookieModal');
-                const acceptAllBtn = document.getElementById('acceptAllCookies');
-                const declineOptionalBtn = document.getElementById('declineOptionalCookies');
-                const settingsBtn = document.getElementById('cookieSettings');
-                const saveDeclineBtn = document.getElementById('saveSettingsDecline');
-                const saveAcceptBtn = document.getElementById('saveSettingsAccept');
-
-                // Toggle elements
-                const toggleAnalytics = document.getElementById('toggleAnalytics');
-                const toggleMarketing = document.getElementById('toggleMarketing');
-                const togglePreferences = document.getElementById('togglePreferences');
-
-                // Initialize on page load
-                function init() {
-                    const savedConsent = getCookie(COOKIE_NAME);
-
-                    if (savedConsent) {
-                        try {
-                            const parsed = JSON.parse(savedConsent);
-
-                            // Проверка версии - если версия изменилась, показать баннер снова
-                            if (parsed.version === COOKIE_VERSION) {
-                                cookieConsent = parsed;
-                                applyConsent();
-                            } else {
-                                console.log('Cookie consent version mismatch, showing banner');
-                                showBanner();
-                            }
-                        } catch (e) {
-                            console.error('Error parsing cookie consent:', e);
-                            showBanner();
-                        }
-                    } else {
-                        // Show banner after a short delay for better UX
-                        setTimeout(showBanner, 1000);
-                    }
-
-                    setupEventListeners();
-                }
-
-                function setupEventListeners() {
-                    // Button listeners
-                    acceptAllBtn?.addEventListener('click', acceptAll);
-                    declineOptionalBtn?.addEventListener('click', declineOptional);
-                    settingsBtn?.addEventListener('click', openSettings);
-                    saveDeclineBtn?.addEventListener('click', declineOptional);
-                    saveAcceptBtn?.addEventListener('click', saveSettings);
-
-                    // Toggle listeners
-                    toggleAnalytics?.addEventListener('click', () => toggleCategory('analytics'));
-                    toggleMarketing?.addEventListener('click', () => toggleCategory('marketing'));
-                    togglePreferences?.addEventListener('click', () => toggleCategory('preferences'));
-
-                    // Close modal on outside click
-                    modal?.addEventListener('click', (e) => {
-                        if (e.target === modal) {
-                            closeSettings();
-                        }
-                    });
-
-                    // Close modal on Escape key
-                    document.addEventListener('keydown', (e) => {
-                        if (e.key === 'Escape' && modal?.classList.contains('show')) {
-                            closeSettings();
-                        }
-                    });
-
-                    // Trap focus in modal
-                    modal?.addEventListener('keydown', trapFocus);
-                }
-                // Keyboard support for toggles
-                [toggleAnalytics, toggleMarketing, togglePreferences].forEach(toggle => {
-                    if (toggle) {
-                        toggle.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                const category = toggle.dataset.category;
-                                toggleCategory(category);
-                            }
-                        });
-                    }
-                });
-                // ACCESSIBILITY: Trap focus inside modal
-                function trapFocus(e) {
-                    if (e.key !== 'Tab') return;
-
-                    const focusableElements = modal.querySelectorAll(
-                        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-                    );
-                    const firstElement = focusableElements[0];
-                    const lastElement = focusableElements[focusableElements.length - 1];
-
-                    if (e.shiftKey && document.activeElement === firstElement) {
-                        lastElement.focus();
-                        e.preventDefault();
-                    } else if (!e.shiftKey && document.activeElement === lastElement) {
-                        firstElement.focus();
-                        e.preventDefault();
-                    }
-                }
-
-                function showBanner() {
-                    banner?.classList.add('show');
-                    // Announce to screen readers
-                    banner?.setAttribute('aria-hidden', 'false');
-                }
-
-                function hideBanner() {
-                    banner?.classList.remove('show');
-                    banner?.setAttribute('aria-hidden', 'true');
-                }
-
-                function openSettings() {
-                    updateToggles();
-                    modal?.classList.add('show');
-                    document.body.style.overflow = 'hidden';
-
-                    // Focus first interactive element
-                    const firstButton = modal?.querySelector('button');
-                    setTimeout(() => firstButton?.focus(), 100);
-                }
-
-                function closeSettings() {
-                    modal?.classList.remove('show');
-                    document.body.style.overflow = '';
-
-                    // Return focus to settings button
-                    settingsBtn?.focus();
-                }
-
-                function updateToggles() {
-                    const toggles = {
-                        analytics: toggleAnalytics,
-                        marketing: toggleMarketing,
-                        preferences: togglePreferences
-                    };
-
-                    Object.entries(toggles).forEach(([category, element]) => {
-                        if (cookieConsent[category]) {
-                            element?.classList.add('active');
-                            element?.setAttribute('aria-checked', 'true');
-                        } else {
-                            element?.classList.remove('active');
-                            element?.setAttribute('aria-checked', 'false');
-                        }
-                    });
-                }
-
-                function toggleCategory(category) {
-                    const toggle = document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`);
-
-                    cookieConsent[category] = !cookieConsent[category];
-
-                    if (cookieConsent[category]) {
-                        toggle?.classList.add('active');
-                        toggle?.setAttribute('aria-checked', 'true');
-                    } else {
-                        toggle?.classList.remove('active');
-                        toggle?.setAttribute('aria-checked', 'false');
-                    }
-                }
-
-                function acceptAll() {
-                    cookieConsent = {
-                        version: COOKIE_VERSION,
-                        necessary: true,
-                        analytics: true,
-                        marketing: true,
-                        preferences: true,
-                        timestamp: new Date().toISOString()
-                    };
-                    saveConsent();
-                    hideBanner();
-                    closeSettings();
-                    applyConsent();
-
-                    // Log consent event for analytics
-                    logConsentEvent('accept_all');
-                }
-
-                function declineOptional() {
-                    cookieConsent = {
-                        version: COOKIE_VERSION,
-                        necessary: true,
-                        analytics: false,
-                        marketing: false,
-                        preferences: false,
-                        timestamp: new Date().toISOString()
-                    };
-                    saveConsent();
-                    hideBanner();
-                    closeSettings();
-                    applyConsent();
-
-                    logConsentEvent('decline_optional');
-                }
-
-                function saveSettings() {
-                    cookieConsent.version = COOKIE_VERSION;
-                    cookieConsent.timestamp = new Date().toISOString();
-                    saveConsent();
-                    closeSettings();
-                    hideBanner();
-                    applyConsent();
-
-                    logConsentEvent('custom_settings');
-                }
-
-                function saveConsent() {
-                    setCookie(COOKIE_NAME, JSON.stringify(cookieConsent), COOKIE_EXPIRY_DAYS);
-                    console.log('✅ Cookie consent saved:', cookieConsent);
-                }
-
-                function applyConsent() {
-                    console.log('🍪 Applying consent settings:', cookieConsent);
-
-                    // Update Google Consent Mode v2
-                    if (typeof gtag === 'function') {
-                        gtag('consent', 'update', {
-                            'ad_storage': cookieConsent.marketing ? 'granted' : 'denied',
-                            'ad_user_data': cookieConsent.marketing ? 'granted' : 'denied',
-                            'ad_personalization': cookieConsent.marketing ? 'granted' : 'denied',
-                            'analytics_storage': cookieConsent.analytics ? 'granted' : 'denied',
-                            'functionality_storage': cookieConsent.preferences ? 'granted' : 'denied',
-                            'personalization_storage': cookieConsent.preferences ? 'granted' : 'denied'
-                        });
-                    }
-
-                    // Apply analytics consent
-                    if (cookieConsent.analytics) {
-                        enableAnalytics();
-                    } else {
-                        disableAnalytics();
-                    }
-
-                    // Apply marketing consent
-                    if (cookieConsent.marketing) {
-                        enableMarketing();
-                    } else {
-                        disableMarketing();
-                    }
-
-                    // Apply preferences consent
-                    if (cookieConsent.preferences) {
-                        enablePreferences();
-                    } else {
-                        disablePreferences();
-                    }
-                }
-
-                function enableAnalytics() {
-                    console.log('📊 Analytics enabled');
-
-                    // Example: Load Google Analytics
-                    // if (!window.gtag && !document.querySelector('script[src*="googletagmanager"]')) {
-                    //     const script = document.createElement('script');
-                    //     script.async = true;
-                    //     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-                    //     document.head.appendChild(script);
-                    //     
-                    //     script.onload = () => {
-                    //         window.dataLayer = window.dataLayer || [];
-                    //         function gtag(){dataLayer.push(arguments);}
-                    //         gtag('js', new Date());
-                    //         gtag('config', 'GA_MEASUREMENT_ID');
-                    //     };
-                    // }
-                }
-
-                function disableAnalytics() {
-                    console.log('📊 Analytics disabled');
-                    // Disable analytics tracking
-                }
-
-                function enableMarketing() {
-                    console.log('📢 Marketing enabled');
-                    // Add marketing scripts here (Facebook Pixel, etc.)
-                }
-
-                function disableMarketing() {
-                    console.log('📢 Marketing disabled');
-                }
-
-                function enablePreferences() {
-                    console.log('⚙️ Preferences enabled');
-                }
-
-                function disablePreferences() {
-                    console.log('⚙️ Preferences disabled');
-                }
-
-                function logConsentEvent(action) {
-                    // Log to console
-                    console.log(`🍪 Consent event: ${action}`, cookieConsent);
-
-                    // Optional: Send to analytics (only if analytics cookies are accepted)
-                    if (cookieConsent.analytics && typeof gtag === 'function') {
-                        gtag('event', 'cookie_consent', {
-                            'event_category': 'Cookie Consent',
-                            'event_label': action,
-                            'value': 1
-                        });
-                    }
-                }
-
-                // Cookie utility functions
-                function setCookie(name, value, days) {
-                    const expires = new Date();
-                    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-                    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax;Secure`;
-                }
-
-                function getCookie(name) {
-                    const nameEQ = name + '=';
-                    const ca = document.cookie.split(';');
-                    for (let i = 0; i < ca.length; i++) {
-                        let c = ca[i];
-                        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-                    }
-                    return null;
-                }
-
-                function deleteCookie(name) {
-                    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
-                }
-
-                // Initialize when DOM is ready
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', init);
-                } else {
-                    init();
-                }
-
-                // Expose functions globally
-                window.openCookieSettings = openSettings;
-                window.getCookieConsent = () => cookieConsent;
-
-                // Expose function to programmatically revoke consent
-                window.revokeCookieConsent = function () {
-                    deleteCookie(COOKIE_NAME);
-                    cookieConsent = {
-                        version: COOKIE_VERSION,
-                        necessary: true,
-                        analytics: false,
-                        marketing: false,
-                        preferences: false,
-                        timestamp: null
-                    };
-                    showBanner();
-                };
-
-            })();
-        </script>
+        })();
+    </script>
 </body>
 
 </html>
