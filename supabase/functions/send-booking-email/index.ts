@@ -3,14 +3,12 @@ import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
-// Пока заявки идут на твою почту
 const SALON_EMAIL = "nechay1996@gmail.com";
 
 if (!RESEND_API_KEY) {
   console.error("Missing RESEND_API_KEY");
 }
 
-// Общая обертка для красивого письма
 function baseTemplate(params: {
   title: string;
   heading: string;
@@ -83,7 +81,7 @@ function baseTemplate(params: {
 }
 
 serve(async (req: Request) => {
-  // CORS для браузера
+  // CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
@@ -129,7 +127,6 @@ serve(async (req: Request) => {
       );
     }
 
-    // HTML для салона (админ)
     const salonContent = `
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
         <tr>
@@ -192,7 +189,6 @@ serve(async (req: Request) => {
       footer: "Diese E-Mail wurde automatisch vom Terminformular der Webseite gesendet.",
     });
 
-    // HTML для клиента
     const clientContent = `
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
         <tr>
@@ -273,7 +269,7 @@ serve(async (req: Request) => {
       contentHtml: clientContent,
     });
 
-    // 1) письмо салону
+
     const salonRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -281,7 +277,7 @@ serve(async (req: Request) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // КОГДА настроишь домен в Resend под xinvestai.com - поменяешь "from" здесь
+
         from: "Beautysalon Harmonie <booking@xinvestai.com>",
         to: [SALON_EMAIL],
         subject: "Neue Termin-Anfrage von der Webseite",
@@ -305,7 +301,6 @@ serve(async (req: Request) => {
       );
     }
 
-    // 2) письмо клиенту
     const clientRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
